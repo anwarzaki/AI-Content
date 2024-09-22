@@ -30,10 +30,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="flex justify-between">
-          <h1> </h1>
+          <SignedIn>
+             {children}
+      </SignedIn>
+        {/* <header className="flex justify-between">
           <UserButton showName />
-        </header>
+        </header> */}
         <main>
           <SignedOut>
            <div className="h-screen flex items-center justify-center">
@@ -41,9 +43,7 @@ export default function RootLayout({
             </div> 
           
           </SignedOut>
-        <SignedIn>
-             {children}
-      </SignedIn>
+      
         </main>
         
       </body>
