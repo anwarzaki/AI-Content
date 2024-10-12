@@ -1,6 +1,6 @@
 import React from "react";
 import Sidbar from "./_components/Sidbar";
-// import Header from "./_components/Header";
+import Header from "./_components/Header";
 
 const dashLayout = ({ children }) => {
   return (
@@ -9,8 +9,11 @@ const dashLayout = ({ children }) => {
         <Sidbar />
       </div>
       <div className="md:ml-64">
-        {/* <Header /> */}
+        <Header />
+        <div className="p-10">
         {children}
+        </div>
+       
       </div>
     </div>
   );
