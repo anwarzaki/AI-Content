@@ -6,10 +6,9 @@ export default function Home() {
   return (
     <div className=" items-center justify-items-center ">
        <Header />
-       <header className="flex justify-between p-3">
-        <p></p>
-          <UserButton />
-        </header>
+       <div className="flex w-full justify-end p-2">
+        <UserButton />
+      </div>
     </div>
   );
 }

@@ -16,6 +16,7 @@ import { db } from "../../../configs/db.jsx";
 import * as AlertDialog from "@radix-ui/react-alert-dialog";
 import { uuid } from "drizzle-orm/pg-core";
 import { CourseList } from "../../../configs/schema";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
   const streppOptions = [
@@ -40,6 +41,7 @@ export default function Page() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const { user } = useUser();
+  const router = useRouter();
 
   const GenerateCourseLayout = async () => {
     try {
@@ -145,6 +147,7 @@ export default function Page() {
     } finally {
       setLoading(false);
     }
+    router.replace("/create-course/" + id);
   };
 
   useEffect(() => {

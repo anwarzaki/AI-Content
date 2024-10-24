@@ -1,9 +1,16 @@
-.nav{
-    height: 80px;
-    /* background-color: rgb(55, 55, 105); */
+/* Reset margins and ensure body takes full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
-.img{
-    height: auto;
-    width: 80px;
-    /* border-radius: 50%; */
+
+/* Fixing the header at the top */
+.nav {
+    height: 80px;
+    width: 100%;
+    /* background-color: rgb(55, 55, 105); */
+    position: relative; /* or fixed if you want it to stay at the top on scroll */
+    top: 0;
+    left: 0;
 }
