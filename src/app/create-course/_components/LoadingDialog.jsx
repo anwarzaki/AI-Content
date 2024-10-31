@@ -19,6 +19,7 @@ const LoadingDialog = ({ loading }) => {
                 width={100}
                 height={100}
                 alt="Loading..."
+                unoptimized
               />
               <h2>Please wait.. AI is working on your course</h2>
             </div>

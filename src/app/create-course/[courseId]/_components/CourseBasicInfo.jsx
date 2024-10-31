@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { FcPuzzle } from "react-icons/fc";
 import { storage } from "../../../../../configs/firebaseConfig";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
@@ -10,6 +10,12 @@ import { eq, set } from "drizzle-orm";
 
 const CourseBasicInfo = ({ course }) => {
   const [selectedFile, setSelectedFile] = useState();
+
+  useEffect(() => {
+    if(course){
+      setSelectedFile(course?.courseBanner);
+    }
+  },[course]);
 
   const onFileSelected = async (event) => {
     const file = event.target.files[0];

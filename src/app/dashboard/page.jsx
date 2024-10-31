@@ -1,12 +1,12 @@
-// import { UserButton } from "@clerk/nextjs";
 import React from "react";
 import AddCourse from "./_components/AddCourse";
-
+import UserCourseList from "./_components/UserCourseList";
 const page = () => {
   return (
     <div>
-      {/* <UserButton /> */}
       <AddCourse />
+      {/* Display list of courses here */}
+       <UserCourseList />
     </div>
   );
 };
