@@ -95,30 +95,6 @@ export default function Page() {
     }
   };
 
-  // const SaveCourseLayoutInDb = async (courseLayout) => {
-  //   try {
-  //     var id = uuidv4();
-  //     setLoading(true);
-
-  //     // Insert into database
-  //     const result = await db.insert(CourseList).values({
-  //       courseId: id,
-  //       name: UserCourseInput?.topic,
-  //       level: UserCourseInput?.level,
-  //       category: UserCourseInput?.category,
-  //       courseOutput: courseLayout, // This is coming from AI response
-  //       createdBY: user?.primaryEmailAddress?.emailAddress,
-  //       userName: user?.fullName,
-  //       userProfileImgage: user?.imageUrl,
-  //     });
-
-  //     console.log("Course layout saved to database successfully.");
-  //   } catch (error) {
-  //     console.error("Error saving course layout to the database:", error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
   const SaveCourseLayoutInDb = async (courseLayout) => {
     try {
       // Ensure the user object is valid

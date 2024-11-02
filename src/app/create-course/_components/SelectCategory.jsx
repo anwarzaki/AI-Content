@@ -26,7 +26,13 @@ export default function SelectCategory() {
             onClick={() => handleCategoryChange(item.name)}
             // defaultValue={UserCourseInput?.item.name}
           >
-            <Image src={item.icon} width={50} height={50} alt={item.name} />
+           <Image
+                  src={item.icon}
+                  width={50}
+                  height={50}
+                  alt={item.name || 'icon'}
+            />
+
             <h2>{item.name}</h2>
           </div>
         ))

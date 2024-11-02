@@ -1,3 +1,4 @@
+'use client';
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React, { use, useEffect, useState } from "react";
@@ -59,12 +60,14 @@ const CourseBasicInfo = ({ course }) => {
         </div>
         <div>
           <label htmlFor="upload-image">
-            <Image
+          <Image
               src={selectedFile ? selectedFile : "/placeholders.jpg"}
               width={250}
               height={100}
+              alt={selectedFile ? "Uploaded image" : "Placeholder image"} // Add the alt attribute
               className="w-full rounded-xl h-[200px] object-cover cursor-pointer"
             />
+
           </label>
           <input
             type="file"
