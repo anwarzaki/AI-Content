@@ -7,6 +7,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { db } from "../../../../../configs/db";
 import { CourseList } from "../../../../../configs/schema";
 import { eq, set } from "drizzle-orm";
+import Link from "next/link";
 
 const CourseBasicInfo = ({ course }) => {
   const [selectedFile, setSelectedFile] = useState();
@@ -52,7 +53,9 @@ const CourseBasicInfo = ({ course }) => {
           <h2 className="font-medium mt-2 flex gap-2 items-center text-center text-primary">
             <FcPuzzle /> {course?.category}
           </h2>
+          <Link href={'/course/'+course?.courseId+'/start'}>
           <Button className="w-full mt-5">start</Button>
+          </Link>
         </div>
         <div>
           <label htmlFor="upload-image">

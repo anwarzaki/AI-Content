@@ -8,7 +8,7 @@ const Header = () => {
     <div className=" nav flex justify-between items-center p-5 h-[10rem] shadow-md">
       <Image
         className="img"
-        src="logo.svg"
+        src="/logo.svg"
         alt="Logo"
         width={100}
         height={100}

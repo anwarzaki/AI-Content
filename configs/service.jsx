@@ -14,7 +14,7 @@ const getVideos = async(query) =>{
         q: query
     }
     const resp = await Axios.get(YOUTUBE_BASE_URL +'/search',{params});
-    // console.log(resp.data.item)
+    console.log(resp.data.item)
     return resp.data.items;
 }
 

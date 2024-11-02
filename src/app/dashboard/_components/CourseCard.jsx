@@ -6,6 +6,7 @@ import DropDownOption from './DropDownOption';
 import { db } from '../../../../configs/db';
 import { CourseList } from '../../../../configs/schema';
 import { eq } from 'drizzle-orm';
+import Link from 'next/link';
 
 const CourseCard = ({ course, refreshData }) => {
     const [isClient, setIsClient] = useState(false);
@@ -31,14 +32,15 @@ const CourseCard = ({ course, refreshData }) => {
 
     return (
         <div className="shadow-sm rounded-lg border pp-2 hover:scale-105 transition-all cursor-pointer">
-            <Image
-                src={course?.courseBanner}
-                width={300}
-                height={200}
-                className='w-full h-[200px] object-cover rounded-lg'
-                alt={course?.courseName}
-            />
-
+            <Link href={'/course/' + course?.courseId}>
+                <Image
+                    src={course?.courseBanner}
+                    width={300}
+                    height={200}
+                    className='w-full h-[200px] object-cover rounded-lg'
+                    alt={course?.courseName}
+                />
+            </Link>
             <div className='p-2'>
                 <h2 className='font-medium text-md flex items-center justify-between'>
                     {course?.courseOutput?.course_name}

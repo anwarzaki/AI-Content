@@ -28,11 +28,17 @@ const UserCourseList = () => {
 
     return (
         <div className='mt-10'>
-            <h2 className='font-medium text-xl my-5'>My Courses..</h2>
+            <h2 className='font-medium text-xl my-5'>MY COURSES</h2>
             <div className='grid grid-cols-2 lg:grid-cols-3 gap-5'>
-                {courseList.map((course, index) => (
+                {courseList?.length >0 ? courseList.map((course, index) => (
                     <CourseCard key={index} course={course} refreshData={getUserCourses} />
-                ))}
+                    )):
+                    [1,2,3,4,5].map((item,index)=>(
+                        <div className='w-full mt-5 bg-slate-200 animate-pulse rounded-lg h-[250px]'>
+
+                        </div>
+                    ))
+                }
             </div>
         </div>
     );
