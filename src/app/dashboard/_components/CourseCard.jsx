@@ -8,6 +8,7 @@ import { db } from '../../../../configs/db';
 import { CourseList } from '../../../../configs/schema';
 import { eq } from 'drizzle-orm';
 import Link from 'next/link';
+import { CiDumbbell } from "react-icons/ci";
 
 const CourseCard = ({ course, refreshData }) => {
     const [isClient, setIsClient] = useState(false);
@@ -53,6 +54,9 @@ const CourseCard = ({ course, refreshData }) => {
                 <div className="flex items-center justify-between">
                     <h2 className="flex gap-2 items-center p-1 bg-[rgb(40,150,205,.6)] text-primary text-sm rounded-sm">
                         <FaBook /> {course?.courseOutput?.no_of_chapters} Chapters
+                    </h2>
+                    <h2 className="flex gap-2 items-center p-1 bg-[rgb(40,150,205,.6)] text-primary text-sm rounded-sm">
+                    <CiDumbbell /> {course?.level} 
                     </h2>
                 </div>
             </div>
