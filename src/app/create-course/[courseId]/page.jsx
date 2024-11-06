@@ -47,6 +47,7 @@ const PageLayout = ({ params }) => {
 
     setLoading(true);
     const chapters = course.courseOutput.chapters;
+    console.log("Chapters:", chapters);
 
     try {
       for (const [index, chapter] of chapters.entries()) {
@@ -59,6 +60,8 @@ const PageLayout = ({ params }) => {
           // Get AI response
           const result = await GenerateCourseLayout_AI.sendMessage(PROMPT);
           console.log(await result?.response?.text());
+          const content = JSON.parse(result?.response?.text());
+          console.log("Content is here bro:", content);
 
           // Generate video
           const videoResp = await service.getVideos(`${course.name}: ${chapter.chapter_name}`);
@@ -68,8 +71,8 @@ const PageLayout = ({ params }) => {
           // Save to DB
           await db.insert(Chapters).values({
             courseId: course?.courseId,
-            chapterId: index + 1,
-            chapter: chapter,
+            chapterId: index + 1, 
+            chapter:content,
             videoId: videoId,
           });
         } catch (error) {

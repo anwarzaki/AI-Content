@@ -12,6 +12,7 @@ const Header = () => {
         alt="Logo"
         width={100}
         height={100}
+        priority
       />
       <Button>Get Started</Button>
     </div>

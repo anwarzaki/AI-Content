@@ -73,7 +73,7 @@ const CourseStartPage = ({ params }) => {
     return (
         <div className="flex">
             {/* Chapter list sidebar */}
-            <div className="md:w-72 hidden md:block h-screen shadow-md bg-[#FAFAFA]">
+            <div className=" fixed top-0 left-0 h-full z-10 p-4 md:w-72 hidden md:block h-screen  shadow-md bg-[#FAFAFA]">
                 <h2 className="font-lg text-lg bg-[rgb(40,204,205)] text-center p-1">
                     {course?.courseOutput?.course_name}
                 </h2>
@@ -98,7 +98,7 @@ const CourseStartPage = ({ params }) => {
             </div>
 
             {/* Main content */}
-            <div className="p-4">
+            <div className="p-4 md:ml-64">
                 <ChapterContent chapter={selectedChapter} content={chapterContent} />
             </div>
         </div>
