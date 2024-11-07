@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { ClerkProvider , UserButton} from "@clerk/nextjs";
 import React from "react";
 import "./Header.css";
 
@@ -14,7 +15,10 @@ const Header = () => {
         height={100}
         priority
       />
+      <div className="flex items-center gap-5">
       <Button>Get Started</Button>
+      <UserButton />
+      </div>
     </div>
   );
 };

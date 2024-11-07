@@ -1,13 +1,11 @@
 import  Header  from "./_components/Header";
-import { ClerkProvider , UserButton} from "@clerk/nextjs";
+import  Hero  from "./_components/Hero";
 
 export default function Home() {
   return (
-    <div className=" items-center justify-items-center ">
+    <div className=" items-center ">
        <Header />
-       <div className="flex w-full justify-end p-2">
-        <UserButton />
-      </div>
+        <Hero />
     </div>
   );
 }
