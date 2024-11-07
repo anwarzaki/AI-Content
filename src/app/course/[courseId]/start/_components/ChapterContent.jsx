@@ -26,12 +26,11 @@ const ChapterContent = ({chapter,content}) => {
          </div>
           
 
-          {/* content */}
-
-           
+                     {/* content */}
+                     
                 {/* Content Sections with Markdown rendering */}
                 <div className="p-5 bg-gray-100 rounded-lg shadow-md space-y-4">
-                    {content?.chapter?.sections?.map((item, index) => (
+                    {content?.chapter?.map((item, index) => (
                     <div key={index} className="p-5 bg-white rounded-md shadow-sm">
                         <h2 className="font-semibold text-xl text-teal-600 mb-2">
                         {item.title}
@@ -43,14 +42,15 @@ const ChapterContent = ({chapter,content}) => {
                         </ReactMarkdown>
 
                         {/* Markdown rendering for code example */}
+                         {item?.code_example && (
+                            <ReactMarkdown className="bg-gray-900 text-white p-4 rounded-md text-sm overflow-x-auto">
+                                {` \`\`\`javascript\n${item.code_example.replace(/<\/?precode>/g, '')}\n\`\`\` `}
+                            </ReactMarkdown>
+                        )}
 
-                      {item?.code_example  &&  <ReactMarkdown className="bg-gray-900 text-white p-4 rounded-md text-sm overflow-x-auto">
-                        {` \`\`\`javascript\n${item.code_example}\n\`\`\` `}
-                        </ReactMarkdown>
-                        }
                     </div>
-                    ))}
-                </div>
+           ))}
+    </div>
 
                     
      </div>

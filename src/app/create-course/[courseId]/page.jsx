@@ -51,9 +51,11 @@ const PageLayout = ({ params }) => {
 
     try {
       for (const [index, chapter] of chapters.entries()) {
-        const PROMPT = `Explain the concept in detail on Topic: ${course.name}, Chapter: ${chapter.chapter_name} in JSON format with list of arrays with fields as title, description in detail, code example (Code field <precode> if applicable)`;
-        console.log("Prompt:", PROMPT);
-
+        // const PROMPT = `Explain the concept in detail on Topic: ${course.name}, Chapter: ${chapter.chapter_name} in JSON format with list of arrays with fields as title, description in detail, code example (Code field <precode> if applicable) excluding topic and chapter but an array with code example (Code field <precode> if applicable) `;
+        // console.log("Prompt:", PROMPT);
+       const PROMPT =  'Create JSON array for ${course.name}, ${chapter.chapter_name} with format:[{"title": string, "description": string, "code_example": "<precode>code</precode>"}]';
+        console.log("new Prompt:", PROMPT);
+        
         let videoId = '';
 
         try {
