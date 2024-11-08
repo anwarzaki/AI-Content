@@ -1,4 +1,4 @@
-export default catagories =  [
+ const catagories =  [
     {
         id:1,
         name:"programming",
@@ -18,3 +18,5 @@ export default catagories =  [
         prompt:""
     },
 ]
+
+export default catagories;
