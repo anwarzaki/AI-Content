@@ -31,10 +31,6 @@ const CourseStartPage = ({ params }) => {
         }
     }, [courseId]);
 
-    // useEffect(() => {
-    //     getCourse( );
-    // },[]);
-
     const getCourse = async () => {
         try {
             const result = await db
