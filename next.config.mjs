@@ -8,6 +8,12 @@ const nextConfig = {
                 port: '',
                 pathname: '/**', // Allows all paths under Firebase storage
             },
+            {
+                protocol: 'https',
+                hostname: 'images.unsplash.com',
+                port: '',
+                pathname: '/**', // Allows all paths under Unsplash
+            },
         ],
     },
 };
