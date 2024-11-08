@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ClerkProvider , UserButton} from "@clerk/nextjs";
+import { UserButton} from "@clerk/nextjs";
 import React from "react";
 import "./Header.css";
 

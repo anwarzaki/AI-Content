@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Header from "../dashboard/_components/Header";
 import { UserInputContext } from "../_context/UserInputContext";
 
-export default function createCourseLayout({ children }) {
+export default function CreateCourseLayout({ children }) {
   const [UserCourseInput, setUserCourseInput] = useState([]);
   return (
     <div>

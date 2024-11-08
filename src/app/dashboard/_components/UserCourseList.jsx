@@ -14,7 +14,7 @@ const UserCourseList = () => {
         if (user) {
             getUserCourses();
         }
-    }, [user]);
+    }, [user]); // you addedd  getcourses here for vercel error
 
     const getUserCourses = async () => {
         try {

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { and, eq } from "drizzle-orm";
 import { useUser } from "@clerk/nextjs";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { CourseList } from "../../../../../configs/schema";
 import { db } from "../../../../../configs/db";
 import CourseBasicInfo from "../_components/CourseBasicInfo";
@@ -11,7 +11,7 @@ import { FaCopy } from "react-icons/fa6";
 const Finish = ({ params }) => {
   const { user } = useUser();
   const [course, setCourse] = useState(null);
-  const router = useRouter();
+  // const router = useRouter();
 
   useEffect(() => {
     if (params && user) {

@@ -13,8 +13,8 @@ import LoadingDialog from "./_components/LoadingDialog";
 import { useUser } from "@clerk/nextjs";
 import { v4 as uuidv4 } from "uuid";
 import { db } from "../../../configs/db.jsx";
-import * as AlertDialog from "@radix-ui/react-alert-dialog";
-import { uuid } from "drizzle-orm/pg-core";
+// import * as AlertDialog from "@radix-ui/react-alert-dialog";
+// import { uuid } from "drizzle-orm/pg-core";
 import { CourseList } from "../../../configs/schema";
 import { useRouter } from "next/navigation";
 
@@ -105,16 +105,16 @@ export default function Page() {
       var id = uuidv4();
       setLoading(true);
 
-      // Insert into database
-      const result = await db.insert(CourseList).values({
-        courseId: id,
-        name: UserCourseInput?.topic,
-        level: UserCourseInput?.level,
-        category: UserCourseInput?.category,
-        courseOutput: courseLayout, // This is coming from AI response
-        createdBy: user?.primaryEmailAddress?.emailAddress, // Ensure this is not null
-        userName: user?.fullName,
-        userProfileImgage: user?.imageUrl,
+      // Insert into database here the result was assigned before
+       await db.insert(CourseList).values({
+              courseId: id,
+              name: UserCourseInput?.topic,
+              level: UserCourseInput?.level,
+              category: UserCourseInput?.category,
+              courseOutput: courseLayout, // This is coming from AI response
+              createdBy: user?.primaryEmailAddress?.emailAddress, // Ensure this is not null
+              userName: user?.fullName,
+              userProfileImgage: user?.imageUrl,
       });
 
       console.log("Course layout saved to database successfully.");

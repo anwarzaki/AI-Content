@@ -6,7 +6,7 @@ import { Chapters, CourseList } from "../../../../../configs/schema";
 import { and, eq } from "drizzle-orm";
 import ChapterListCard from "@/app/course/[courseId]/start/_components/ChapterListCard";
 import ChapterContent from "@/app/course/[courseId]/start/_components/ChapterContent";
-import ChapterList from "@/app/create-course/[courseId]/_components/ChapterList";
+// import ChapterList from "@/app/create-course/[courseId]/_components/ChapterList";
 
 const CourseStartPage = ({ params }) => {
     // accessing course from courseId

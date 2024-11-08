@@ -1,12 +1,10 @@
 'use client';
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import Sidbar from "./_components/Sidbar";
 import Header from "./_components/Header";
-// import UserCourseListContext from "./_context/UserCourseListContext";
 
 const DashLayout = ({ children }) => {
   // Initialize state within the component
-  const [userCourseList, setUserCourseList] = useState([]);
 
   return (
     // <UserCourseListContext.Provider value={{ }}>

@@ -1,13 +1,13 @@
 'use client';
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FcPuzzle } from "react-icons/fc";
 import { storage } from "../../../../../configs/firebaseConfig";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { db } from "../../../../../configs/db";
 import { CourseList } from "../../../../../configs/schema";
-import { eq, set } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import Link from "next/link";
 
 const CourseBasicInfo = ({ course }) => {
@@ -25,10 +25,10 @@ const CourseBasicInfo = ({ course }) => {
     const fileName = Date.now() + ".jpg";
     const StorageRef = ref(storage, "course-generator/" + fileName);
     await uploadBytes(StorageRef, file)
-      .then((snapshot) => {
+      .then(() => {
         console.log("pic uploaded successfully..");
       })
-      .then((resp) => {
+      .then(() => {
         getDownloadURL(StorageRef).then(async (downloadUrl) => {
           console.log(downloadUrl);
           await db

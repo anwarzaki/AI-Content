@@ -1,5 +1,5 @@
-import { type } from 'os';
-import react from 'react';
+// import { type } from 'os';
+// import react from 'react';
 import YouTube from 'react-youtube';
 import ReactMarkdown from 'react-markdown';
 

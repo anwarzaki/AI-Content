@@ -5,13 +5,14 @@ import CourseCard from "../_components/CourseCard";
 import { db } from "../../../../configs/db";
 import { Button } from "@/components/ui/button";
 
-const explore = () => {
+const Explore = () => {
   const [courseList,setCourseList] = useState([]);
   const [page,setPage] = useState(0);
 
   useEffect(()=>{
     getAllCourses();
-  },[page]);
+  },[page]); // you added getAllCourses here for vercel
+
   const getAllCourses = async()=>{
     const result = await db.select().from(CourseList)
     .limit(9)
