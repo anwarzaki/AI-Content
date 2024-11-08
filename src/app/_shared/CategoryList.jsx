@@ -1,4 +1,4 @@
-export default [
+export default catagories =  [
     {
         id:1,
         name:"programming",
