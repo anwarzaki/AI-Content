@@ -6,7 +6,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className=" nav flex justify-between items-center p-5 h-[10rem] shadow-md">
+    <div className=" nav flex bg-white justify-between items-center p-5 h-[10rem] shadow-md">
       <Image
         className="img"
         src="/logo.svg"
