@@ -33,7 +33,7 @@ export default function SelectCategory() {
                   alt={item.name || 'icon'}
             />
 
-            <h2>{item.name}</h2>
+            <h2 className="text-black">{item.name}</h2>
           </div>
         ))
       ) : (
