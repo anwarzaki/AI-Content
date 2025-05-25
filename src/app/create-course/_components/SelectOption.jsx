@@ -25,7 +25,7 @@ export default function SelectOption() {
         {/* <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Course Details</h2> */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Difficulty Level */}
-          <div>
+          <div className="text-black">
             <label className="block text-sm font-medium mb-2">
               Difficulty Level
             </label>
@@ -44,7 +44,7 @@ export default function SelectOption() {
           </div>
 
           {/* Course Duration */}
-          <div>
+          <div className="text-black">
             <label className="block text-sm font-medium   mb-2">
               Course Duration
             </label>
@@ -62,7 +62,7 @@ export default function SelectOption() {
           </div>
 
           {/* Add Video */}
-          <div>
+          <div className="text-black">
             <label className="block text-sm font-medium   mb-2">
               Add Video
             </label>
@@ -79,7 +79,7 @@ export default function SelectOption() {
           </div>
 
           {/* Number of Chapters */}
-          <div>
+          <div className="text-black">
             <label className="block text-sm font-medium   mb-2">
               Number of Chapters
             </label>
