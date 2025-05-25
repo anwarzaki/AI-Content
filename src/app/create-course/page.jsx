@@ -131,7 +131,7 @@ export default function Page() {
   }, [UserCourseInput]);
 
   return (
-    <>
+    <div className="min-h-screen bg-[rgb(251,251,251)]">
       <div className="flex flex-col items-center p-5">
         <h2 className="text-4xl text-[rgb(13,204,205)] font-medium">
           CREATE COURSES
@@ -190,7 +190,7 @@ export default function Page() {
         </div>
         <LoadingDialog loading={loading} />
       </div>
-    </>
+    </div>
   );
 }
 
