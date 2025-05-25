@@ -9,7 +9,7 @@ export default function AddCourse() {
   return (
     <div className="flex item-center justify-between">
       <div>
-        <h2 className="text-3xl">
+        <h2 className="text-3xl text-black">
           Hello,<span className="font-bold">{user?.fullName}</span>
         </h2>
         <p className="text-sm text-gray-500">
