@@ -6,7 +6,7 @@ import { UserInputContext } from "../_context/UserInputContext";
 export default function CreateCourseLayout({ children }) {
   const [UserCourseInput, setUserCourseInput] = useState([]);
   return (
-    <div>
+    <div className="min-h-screen bg-white">
       <UserInputContext.Provider
         value={{ UserCourseInput, setUserCourseInput }}
       >
