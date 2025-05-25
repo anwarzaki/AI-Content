@@ -8,7 +8,7 @@ const DashLayout = ({ children }) => {
 
   return (
     // <UserCourseListContext.Provider value={{ }}>
-      <div>
+      <div className="min-h-screen bg-white">
         <div className="md:w-64 hidden md:block">
           <Sidbar />
         </div>
