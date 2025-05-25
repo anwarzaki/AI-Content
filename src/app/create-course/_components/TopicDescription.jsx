@@ -16,7 +16,7 @@ const TopicDescription = () => {
   return (
     <div className="mx-20 lg:mx-44">
       {/* input area */}
-      <div className="mt-5">
+      <div className="mt-5 text-black">
         <label>
           Write the topic for which you want to generate a course (Web
           Development, AI etc)
@@ -29,7 +29,7 @@ const TopicDescription = () => {
       </div>
 
       {/* topic description */}
-      <div className="mt-5">
+      <div className="mt-5 text-black">
         <label>Tell us more about your course (optional) </label>
         <Textarea
           placeholder="About your course"
