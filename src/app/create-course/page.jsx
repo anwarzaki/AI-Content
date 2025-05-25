@@ -149,7 +149,7 @@ export default function Page() {
                 >
                   {item.icon}
                 </div>
-                <h2 className="hidden md:block md:text-sm">{item.name}</h2>
+                <h2 className="hidden md:block text-black md:text-sm">{item.name}</h2>
               </div>
               {index < streppOptions.length - 1 && (
                 <div
@@ -174,6 +174,7 @@ export default function Page() {
         {/* next & prev Button */}
         <div className="flex justify-between mt-10">
           <Button
+            className="text-black"
             variant={activeIndex === 0 ? "disabled" : "outline"}
             onClick={() => setActiveIndex(activeIndex - 1)}
           >
